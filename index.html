@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Makmal Bahan • Sains Tahun 4</title>
+<style>
+:root{--bg:#071426;--panel:#10243d;--panel2:#163453;--ink:#f3f8ff;--muted:#b8cbe0;--cyan:#4de5e5;--yellow:#ffd166;--pink:#ff79b0;--green:#76f7a5;--line:#2e5274}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 15% 0%,#17395d 0,#071426 45%,#040b17 100%);font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--ink);line-height:1.5}
+header{padding:24px 16px 18px;text-align:center;background:linear-gradient(135deg,#103b60dd,#08162bdd);border-bottom:1px solid var(--line)}
+.eyebrow{color:var(--cyan);font-weight:800;letter-spacing:2px;font-size:.78rem}h1{font-size:clamp(1.6rem,5vw,2.8rem);line-height:1.1;margin:8px 0}header p{margin:8px auto;max-width:760px;color:var(--muted)}
+.pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}.pill{border:1px solid #3b6788;border-radius:99px;padding:5px 11px;color:#e9f7ff;font-size:.85rem;background:#0b2037}
+nav{position:sticky;top:0;z-index:10;display:flex;gap:7px;padding:10px;overflow-x:auto;background:#061120f2;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+nav button{flex:1;min-width:115px;background:#17314d;color:#eaf5ff;border:1px solid #315678;border-radius:12px;padding:12px 10px;font-weight:800;cursor:pointer}
+nav button.active{background:var(--cyan);color:#04202b;border-color:var(--cyan)}main{max-width:1100px;margin:auto;padding:18px 14px 45px}.tab{display:none}.tab.active{display:block}
+.card{background:linear-gradient(145deg,#112945,#0b1b30);border:1px solid var(--line);border-radius:18px;padding:18px;margin:12px 0;box-shadow:0 10px 28px #0002}
+h2{margin:0 0 8px;font-size:1.35rem}h3{margin:0 0 8px;font-size:1.05rem;color:var(--cyan)}p{margin:8px 0}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:12px}
+button,.btn{font:inherit}.action{background:var(--cyan);color:#03222a;font-weight:850;border:0;border-radius:12px;padding:11px 15px;cursor:pointer}.secondary{background:#203e5d;color:white;border:1px solid #467094;border-radius:11px;padding:10px 13px;cursor:pointer}.action:disabled{opacity:.45;cursor:not-allowed}
+label{display:block;font-weight:700;margin:9px 0 5px}input,select,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid #456887;background:#07172a;color:white;font:inherit}textarea{min-height:90px;resize:vertical}
+.bigemoji{font-size:3rem;line-height:1.2}.material{border:1px solid #365b7c;border-radius:14px;background:#0b2037;padding:14px}.material .bigemoji{font-size:2.5rem}.tag{display:inline-block;border-radius:8px;background:#183e5c;color:#b8ffff;padding:3px 8px;font-size:.82rem}
+.question{border:1px solid var(--line);border-radius:15px;padding:15px;margin:12px 0;background:#0a1b2e}.qtitle{font-weight:800;margin-bottom:10px}.options{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:8px}.opt{display:flex;align-items:center;gap:8px;text-align:left;border:1px solid #365b7c;background:#122a44;color:white;padding:10px;border-radius:10px;cursor:pointer}.opt.selected{border-color:var(--yellow);background:#4b3a16}.opt.correct{border-color:var(--green)}.opt input{width:auto}.status{font-weight:800;margin-top:8px}.bar{height:10px;background:#203a55;border-radius:99px;overflow:hidden}.bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--green));transition:width .3s}
+.scoreline{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}.score{font-size:1.25rem;font-weight:900;color:var(--yellow)}.note{border-left:4px solid var(--yellow);padding:10px 12px;background:#332d1d;border-radius:0 10px 10px 0;color:#fff4cf}
+table{border-collapse:collapse;width:100%;margin-top:8px}td,th{border:1px solid #34536f;padding:9px;text-align:left}th{background:#173653}
+.slip{background:#f8fbff;color:#13263c;border:3px solid #38bcd0;border-radius:16px;padding:22px}.slip h2,.slip h3{color:#0b5670}.slip table td,.slip table th{border-color:#b4cbd8}.slip .muted{color:#405b70}.slip .tag{background:#d7f7fa;color:#075366}
+footer{text-align:center;padding:22px;color:var(--muted);font-size:.85rem}
+@media(max-width:600px){header{padding:20px 12px}main{padding:12px 10px 30px}.card{padding:14px}nav button{min-width:112px;padding:10px 8px;font-size:.88rem}.slip{padding:14px}}
+</style></head>
+<body>
+<header>
+<div class="eyebrow">MAKMAL DIGITAL • PDPR</div>
+<h1>🧪 Misi: Kenali Bahan</h1>
+<p>Sains Tahun 4 · Sumber Asas Bahan & Sifat Bahan</p>
+<div class="pills"><span class="pill">8.1 Sumber Asas Bahan</span><span class="pill">8.2 Sifat Bahan</span><span class="pill">Jumlah 50 markah</span></div>
+</header>
+<nav aria-label="Menu pembelajaran">
+<button class="active" data-tab="sim">🔬 Simulator</button><button data-tab="quiz">🧩 Kuiz Bergambar</button><button data-tab="obs">📝 Pemerhatian</button><button data-tab="slip">🏅 Slip Pencapaian</button>
+</nav>
+<main>
+<section id="sim" class="tab active">
+<div class="card"><h2>🔎 Stesen 1 — Teroka bahan</h2><p>Perhatikan objek. Pilih objek untuk melihat sumber asas dan sifatnya. Kemudian lengkapkan tiga misi mini untuk memperoleh <b>9 markah simulator</b>.</p>
+<div class="grid" id="materials"></div></div>
+<div class="card"><h2>🎯 Misi mini simulator</h2><p class="muted">Setiap misi bernilai 3 markah. Pilih jawapan yang paling tepat.</p>
+<div id="missions"></div><div class="scoreline"><span>Markah simulator</span><span class="score" id="simScore">0 / 9</span></div><div class="bar"><span id="simBar"></span></div></div>
+<div class="card"><h3>📚 Ingat kembali</h3><div class="grid">
+<div class="material"><div class="bigemoji">🌳</div><b>Sumber tumbuhan</b><p>Contoh: kayu, kapas dan kertas.</p></div>
+<div class="material"><div class="bigemoji">🐑</div><b>Sumber haiwan</b><p>Contoh: bulu biri-biri dan kulit haiwan.</p></div>
+<div class="material"><div class="bigemoji">⛰️</div><b>Sumber bumi</b><p>Contoh: logam, pasir dan tanah liat.</p></div>
+<div class="material"><div class="bigemoji">🛢️</div><b>Sumber petroleum</b><p>Contoh: plastik dan bahan sintetik tertentu.</p></div>
+</div><p class="note">Sifat bahan termasuk keras/lembut, kuat/lemah, kenyal/tidak kenyal, menyerap air/tidak menyerap air, lut sinar/tidak lut sinar dan kalis air.</p></div>
+</section>
+<section id="quiz" class="tab"><div class="card"><h2>🧩 Stesen 2 — Kuiz bergambar</h2><p>Jawab 21 soalan aneka pilihan A, B, C atau D. Setiap jawapan betul mendapat 1 markah.</p><div class="scoreline"><span>Markah kuiz</span><span class="score" id="quizScore">0 / 21</span></div><div class="bar"><span id="quizBar"></span></div><div id="quizQuestions"></div><button class="action" id="gradeQuiz">Semak jawapan kuiz</button> <span id="quizFeedback" class="status"></span></div></section>
+<section id="obs" class="tab"><div class="card"><h2>📝 Stesen 3 — Pemerhatian</h2><p>Bahagian A: 5 soalan objektif (5 markah). Bahagian B: 3 pernyataan bertulis, 5 markah setiap satu (15 markah). Tulis jawapan menggunakan ayat sendiri.</p>
+<h3>Bahagian A — Objektif (5 markah)</h3><div id="obsQuestions"></div>
+<h3>Bahagian B — Pernyataan bertulis (15 markah)</h3>
+<div class="question"><div class="qtitle">1. (5 markah) Nyatakan sumber asas bagi kayu, kertas dan bulu biri-biri. Berikan satu contoh objek bagi setiap bahan.</div><textarea id="written1" placeholder="Contoh: Kayu berasal daripada..."></textarea><p class="muted">Panduan semakan: sumber tumbuhan/kayu, tumbuhan/kertas, haiwan/bulu biri-biri serta contoh objek yang sesuai.</p></div>
+<div class="question"><div class="qtitle">2. (5 markah) Pilih satu objek di rumah. Terangkan dua sifat bahannya dan sebab bahan itu sesuai digunakan.</div><textarea id="written2" placeholder="Contoh: Botol air diperbuat daripada..."></textarea><p class="muted">Panduan semakan: nama objek/bahan, sekurang-kurangnya dua sifat, dan alasan yang munasabah.</p></div>
+<div class="question"><div class="qtitle">3. (5 markah) Cadangkan bahan untuk menghasilkan baju hujan atau payung. Jelaskan sifat bahan yang diperlukan dan sebab pilihan kamu.</div><textarea id="written3" placeholder="Tulis jawapan dengan ayat lengkap..."></textarea><p class="muted">Panduan semakan: bahan sesuai seperti plastik/kain bersalut, kalis air, fleksibel/kuat dan alasan.</p></div>
+<div class="note">Jawapan bertulis dinilai berdasarkan ketepatan sains, contoh dan alasan. Sistem memberi cadangan markah automatik berdasarkan kata kunci; guru boleh menyemak semula markah sebelum slip dijana.</div>
+<button class="action" id="gradeObs">Semak pemerhatian</button> <span id="obsFeedback" class="status"></span>
+<div class="scoreline"><span>Markah pemerhatian</span><span class="score" id="obsScore">0 / 20</span></div><div class="bar"><span id="obsBar"></span></div></div></section>
+<section id="slip" class="tab"><div class="card"><h2>🏅 Stesen 4 — Slip pencapaian</h2><p>Isi maklumat murid, kemudian jana slip. Lengkapkan simulator, kuiz dan pemerhatian terlebih dahulu untuk markah yang tepat.</p>
+<div class="grid"><div><label for="student">Nama murid</label><input id="student" placeholder="Nama penuh murid"></div><div><label for="className">Kelas</label><input id="className" placeholder="Contoh: 4 Bestari"></div><div><label for="date">Tarikh</label><input id="date" type="date"></div></div>
+<button class="action" id="makeSlip">Jana slip pencapaian</button> <button class="secondary" id="printSlip">Cetak / Simpan PDF</button>
+<div id="slipContent" style="margin-top:16px"></div></div></section>
+</main><footer>Makmal Digital Sains Tahun 4 • Bahan · Pembelajaran di rumah (PDPR)</footer>
+<script>
+const $=id=>document.getElementById(id);
+const items=[
+{e:"🪑",n:"Kerusi kayu",s:"Tumbuhan",m:"Kayu",p:"Keras dan kuat",u:"Sesuai menampung berat badan."},
+{e:"📄",n:"Kertas",s:"Tumbuhan",m:"Pulpa kayu",p:"Ringan dan mudah koyak apabila basah",u:"Sesuai untuk menulis dan melukis."},
+{e:"👕",n:"Baju kapas",s:"Tumbuhan",m:"Kapas",p:"Lembut dan menyerap air",u:"Selesa dipakai."},
+{e:"🧶",n:"Baju bulu",s:"Haiwan",m:"Bulu biri-biri",p:"Lembut dan memerangkap haba",u:"Membantu mengekalkan kepanasan."},
+{e:"🥄",n:"Sudu logam",s:"Bumi",m:"Logam",p:"Keras, kuat dan pengalir haba",u:"Sesuai untuk makan dan tahan lama."},
+{e:"🧴",n:"Botol plastik",s:"Petroleum",m:"Plastik",p:"Ringan dan tidak menyerap air",u:"Sesuai menyimpan cecair."},
+{e:"🪟",n:"Tingkap kaca",s:"Bumi (bahan mineral)",m:"Kaca daripada pasir silika",p:"Lutsinar tetapi mudah pecah",u:"Membenarkan cahaya masuk."},
+{e:"🧱",n:"Batu bata",s:"Bumi",m:"Tanah liat",p:"Keras dan kuat",u:"Sesuai untuk membina dinding."}
+];
+$("materials").innerHTML=items.map((x,i)=>`<button class="material" style="color:white;text-align:left;cursor:pointer" onclick="showMaterial(${i})"><div class="bigemoji">${x.e}</div><b>${x.n}</b><p class="muted">Tekan untuk teroka</p></button>`).join("");
+function showMaterial(i){let x=items[i];let box=document.getElementById("detailBox");if(!box){box=document.createElement("div");box.id="detailBox";box.className="material";$("materials").after(box)}box.innerHTML=`<div class="bigemoji">${x.e}</div><h3>${x.n}</h3><p><b>Sumber asas:</b> ${x.s}</p><p><b>Bahan:</b> ${x.m}</p><p><b>Sifat:</b> ${x.p}</p><p><b>Kegunaan:</b> ${x.u}</p>`}
+const missions=[
+{q:"Pilih sumber asas bagi kertas.",o:["Haiwan","Tumbuhan","Logam","Petroleum"],a:1},
+{q:"Bahan manakah sesuai untuk baju hujan?",o:["Kertas","Kapas tanpa salutan","Plastik kalis air","Bulu biri-biri"],a:2},
+{q:"Mengapakah logam sesuai digunakan untuk membuat sudu?",o:["Sangat lembut","Keras dan kuat","Menyerap banyak air","Mudah koyak"],a:1}
+];
+let simDone=[false,false,false],simScore=0;
+$("missions").innerHTML=missions.map((m,i)=>`<div class="question"><div class="qtitle">${i+1}. ${m.q}</div><div class="options">${m.o.map((o,j)=>`<button class="opt" onclick="answerMission(${i},${j},this)">${"ABCD"[j]}. ${o}</button>`).join("")}</div><div id="mstatus${i}" class="status"></div></div>`).join("");
+window.answerMission=(i,j,el)=>{if(simDone[i])return;simDone[i]=true;let correct=j===missions[i].a;if(correct)simScore+=3;el.parentElement.querySelectorAll("button").forEach((b,k)=>{b.disabled=true;if(k===missions[i].a)b.classList.add("correct")});$("mstatus"+i).textContent=correct?"Betul! +3 markah":"Belum tepat. Jawapan: "+ "ABCD"[missions[i].a];$("simScore").textContent=simScore+" / 9";$("simBar").style.width=(simScore/9*100)+"%";updateTotal()};
+const quiz=[
+["🌳", "Kayu biasanya berasal daripada sumber asas...",["Tumbuhan","Haiwan","Logam","Petroleum"],0],
+["🐑","Bulu biri-biri ialah bahan daripada sumber...",["Bumi","Haiwan","Tumbuhan","Air"],1],
+["🛢️","Plastik biasanya dihasilkan daripada bahan mentah...",["Kapas","Kayu sahaja","Petroleum","Bulu"],2],
+["📄","Kertas boleh dibuat daripada...",["Pulpa kayu","Kaca","Besi","Getah asli sahaja"],0],
+["🥄","Sudu logam berasal daripada sumber asas...",["Haiwan","Tumbuhan","Bumi","Cahaya matahari"],2],
+["👕","Kapas sesuai untuk pakaian kerana bersifat...",["Mudah pecah","Lembut dan menyerap air","Kalis air sepenuhnya","Lutsinar"],1],
+["🪟","Bahan yang membenarkan cahaya melaluinya dengan jelas ialah...",["Legap","Lutsinar","Kasar","Kalis air"],1],
+["🧴","Botol plastik sesuai menyimpan air kerana plastik biasanya...",["Mudah larut","Menyerap air","Tidak menyerap air","Mudah koyak seperti kertas"],2],
+["🧱","Bahan yang sesuai untuk membina dinding ialah...",["Kertas tisu","Batu bata","Kapas","Span lembut"],1],
+["☂️","Sifat utama bahan payung ialah...",["Menyerap air dengan cepat","Kalis air","Mudah hancur dalam air","Lutsinar sahaja"],1],
+["🧽","Span sesuai mengelap air kerana boleh...",["Menyerap air","Mengalirkan elektrik dengan baik","Menjadi logam","Menahan cahaya"],0],
+["🪵","Kayu yang digunakan untuk kerusi perlu...",["Lembut dan rapuh","Keras dan kuat","Mudah larut","Menyerap air sebanyak mungkin"],1],
+["🪟","Kaca tingkap biasanya dipilih kerana...",["Lutsinar","Sangat lembut","Mudah koyak","Kenyal"],0],
+["🧤","Sarung tangan getah boleh membantu kerana getah bersifat...",["Kalis air dan fleksibel","Mudah pecah seperti kaca","Menyerap semua air","Diperbuat daripada kertas"],0],
+["🧲","Objek logam biasanya bersifat...",["Lembut seperti kapas","Keras dan kuat","Mudah koyak","Menyerap air"],1],
+["🪑","Apakah langkah yang baik sebelum memilih bahan untuk sesuatu objek?",["Pilih secara rawak","Fikirkan fungsi dan sifat bahan","Pilih bahan paling mahal","Abaikan keselamatan"],1],
+["🧥","Bahan baju hujan perlu menghalang air daripada...",["Membeku","Menembusinya","Berwarna","Berbunyi"],1],
+["🧻","Kertas basah mudah koyak. Ini menunjukkan sifat kertas...",["Tidak berubah langsung","Menjadi lebih kuat apabila basah","Kurang kuat apabila basah","Sentiasa kalis air"],2],
+["🪨","Tanah liat boleh digunakan untuk membuat batu bata selepas dibentuk dan...",["Dibakar","Dibekukan sahaja","Dilarutkan","Dilipat"],0],
+["♻️","Menggunakan semula botol yang masih elok dapat membantu...",["Menambah sampah","Mengurangkan sisa","Membazir bahan","Merosakkan semua bahan"],1],
+["🛠️","Mengapakah kita perlu menaakul pemilihan bahan?",["Supaya objek sesuai dengan kegunaannya","Supaya objek tiada fungsi","Supaya semua objek sama","Supaya bahan tidak dikenal pasti"],0]
+];
+let quizAnswers=Array(quiz.length).fill(null),quizMarked=false,quizScore=0;
+$("quizQuestions").innerHTML=quiz.map((q,i)=>`<div class="question" id="qq${i}"><div class="qtitle">${i+1}. <span style="font-size:1.6rem">${q[0]}</span> ${q[1]}</div><div class="options">${q[2].map((o,j)=>`<button class="opt" onclick="chooseQuiz(${i},${j},this)">${"ABCD"[j]}. ${o}</button>`).join("")}</div></div>`).join("");
+window.chooseQuiz=(i,j,el)=>{if(quizMarked)return;quizAnswers[i]=j;el.parentElement.querySelectorAll("button").forEach((b,k)=>b.classList.toggle("selected",k===j))};
+$("gradeQuiz").onclick=()=>{if(quizMarked){return}quizMarked=true;quizScore=0;quiz.forEach((q,i)=>{let btns=$("qq"+i).querySelectorAll("button");btns.forEach((b,j)=>{b.disabled=true;if(j===q[3])b.classList.add("correct")});if(quizAnswers[i]===q[3])quizScore++});$("quizScore").textContent=quizScore+" / 21";$("quizBar").style.width=(quizScore/21*100)+"%";$("quizFeedback").textContent="Selesai! "+quizScore+" jawapan betul daripada 21.";updateTotal()};
+const obs=[
+["Sumber asas bagi meja kayu ialah...",["Haiwan","Tumbuhan","Petroleum","Air"],1],
+["Bahan utama untuk membuat kaca tingkap ialah...",["Pasir silika","Kapas","Bulu","Kertas"],0],
+["Bahan yang kalis air ialah...",["Tisu","Kertas biasa","Plastik tertentu","Kapas tanpa rawatan"],2],
+["Sifat yang sesuai bagi bahan kerusi ialah...",["Kuat","Mudah koyak","Mudah larut","Menyerap air dengan cepat"],0],
+["Bahan yang menyerap air dengan baik ialah...",["Kaca","Span","Logam","Plastik"],1]
+];
+let obsAnswers=Array(5).fill(null),obsObjScore=0,obsWrittenScore=0,obsMarked=false;
+$("obsQuestions").innerHTML=obs.map((q,i)=>`<div class="question" id="oq${i}"><div class="qtitle">${i+1}. ${q[0]}</div><div class="options">${q[1].map((o,j)=>`<button class="opt" onclick="chooseObs(${i},${j},this)">${"ABCD"[j]}. ${o}</button>`).join("")}</div></div>`).join("");
+window.chooseObs=(i,j,el)=>{if(obsMarked)return;obsAnswers[i]=j;el.parentElement.querySelectorAll("button").forEach((b,k)=>b.classList.toggle("selected",k===j))};
+function keywordScore(text,groups){let t=text.toLowerCase(),hits=groups.filter(g=>g.some(k=>t.includes(k))).length;return Math.min(5,Math.round(hits/groups.length*5))}
+$("gradeObs").onclick=()=>{if(obsMarked)return;obsMarked=true;obsObjScore=0;obs.forEach((q,i)=>{let bs=$("oq"+i).querySelectorAll("button");bs.forEach((b,j)=>{b.disabled=true;if(j===q[2])b.classList.add("correct")});if(obsAnswers[i]===q[2])obsObjScore++});
+let a=$("written1").value,b=$("written2").value,c=$("written3").value;
+let s1=keywordScore(a,[["tumbuhan","pokok"],["kayu"],["kertas"],["haiwan","biri-biri"],["kerusi","meja","buku","baju","objek"]]);
+let s2=keywordScore(b,[["objek","botol","kerusi","payung","bekas","kasut","baju"],["plastik","kayu","kaca","logam","kapas","getah","kertas"],["keras","lembut","kuat","kenyal","menyerap","lutsinar","kalis air","fleksibel"],["sesuai","kerana","supaya","sebab","kegunaan"]]);
+let s3=keywordScore(c,[["plastik","getah","kain bersalut","nilon"],["kalis air","tidak menyerap","menghalang air"],["kuat","fleksibel","ringan","tahan"],["hujan","air","payung","baju hujan"],["kerana","supaya","sebab","melindungi"]]);
+obsWrittenScore=s1+s2+s3;$("obsScore").textContent=(obsObjScore+obsWrittenScore)+" / 20";$("obsBar").style.width=((obsObjScore+obsWrittenScore)/20*100)+"%";$("obsFeedback").textContent=`Objektif ${obsObjScore}/5 · Pernyataan ${obsWrittenScore}/15 (cadangan automatik; guru boleh laras).`;updateTotal()};
+function updateTotal(){let total=simScore+(quizMarked?quizScore:0)+(obsMarked?obsObjScore+obsWrittenScore:0);window.totalScore=total}
+window.totalScore=0;
+document.querySelectorAll("nav button").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("nav button").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));b.classList.add("active");$(b.dataset.tab).classList.add("active");window.scrollTo({top:0,behavior:"smooth"})}));
+$("date").value=new Date().toISOString().slice(0,10);
+function grade(p){if(p>=80)return["A","Cemerlang"];if(p>=65)return["B","Baik"];if(p>=50)return["C","Memuaskan"];if(p>=40)return["D","Mencapai tahap minimum"];if(p>=20)return["E","Perlu bimbingan"];return["F","Perlu usaha dan bimbingan intensif"]}
+$("makeSlip").onclick=()=>{let total=simScore+(quizMarked?quizScore:0)+(obsMarked?obsObjScore+obsWrittenScore:0);let pct=Math.round(total/50*100),g=grade(pct),name=$("student").value.trim()||"________________",cls=$("className").value.trim()||"________",date=$("date").value||"________";
+$("slipContent").innerHTML=`<div class="slip" id="printable"><div style="text-align:center"><div style="font-size:2.5rem">🏅</div><h2>SLIP PENCAPAIAN MURID</h2><h3>SAINS TAHUN 4 — BAHAN</h3><p class="muted">Pembelajaran di rumah (PDPR)</p></div><hr><p><b>Nama:</b> ${escapeHtml(name)}<br><b>Kelas:</b> ${escapeHtml(cls)}<br><b>Tarikh:</b> ${escapeHtml(date)}</p><table><tr><th>Komponen</th><th>Markah</th></tr><tr><td>Simulator</td><td>${simScore} / 9</td></tr><tr><td>Kuiz bergambar</td><td>${quizMarked?quizScore:0} / 21</td></tr><tr><td>Pemerhatian</td><td>${obsMarked?obsObjScore+obsWrittenScore:0} / 20</td></tr><tr><th>Jumlah</th><th>${total} / 50 (${pct}%)</th></tr></table><div style="text-align:center;padding:18px"><div style="font-size:1rem">GRED</div><div style="font-size:3rem;font-weight:900;color:#087a91">${g[0]}</div><b>${g[1]}</b></div><p><b>Komen guru:</b> ${pct>=80?"Tahniah! Penguasaan sangat baik. Teruskan meneroka dan menerangkan sifat bahan dengan yakin.":pct>=65?"Bagus! Teruskan usaha dan kukuhkan pengetahuan tentang sumber asas serta sifat bahan.":pct>=50?"Usaha yang baik. Ulang kaji dan cuba kaitkan sifat bahan dengan kegunaan objek harian.":"Terus berusaha. Baca semula nota, teroka objek di rumah dan minta bimbingan guru atau penjaga."}</p><p class="muted">Standard pembelajaran: 8.1.1, 8.1.2, 8.1.3, 8.2.1, 8.2.2, 8.2.3 dan 8.2.4.</p><p style="text-align:center;font-size:.85rem">Dijana secara digital • Semakan markah bertulis perlu disahkan oleh guru.</p></div>`};
+function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+$("printSlip").onclick=()=>{if(!$("printable")){alert("Jana slip pencapaian dahulu.");return}let w=window.open("","_blank");w.document.write(`<html><head><title>Slip Pencapaian</title><style>body{font-family:Arial;padding:20px;color:#13263c}.slip{border:3px solid #38bcd0;border-radius:12px;padding:20px}table{width:100%;border-collapse:collapse}td,th{border:1px solid #9ab2c3;padding:8px;text-align:left}h2,h3{text-align:center}</style></head><body>${$("printable").outerHTML}</body></html>`);w.document.close();w.focus();w.print()};
+</script></body></html>
